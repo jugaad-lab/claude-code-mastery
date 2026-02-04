@@ -283,8 +283,9 @@ Add to your HEARTBEAT.md for automatic maintenance:
    - Discovered a new best practice? Update the agent's guidelines
    - Link broken or outdated? Remove or replace it
    - New tool or framework worth mentioning? Add it
-6. Commit changes to the skill repo with clear commit messages
-7. Note learnings in your memory files
+6. Commit changes locally with clear commit messages
+7. **Don't push directly to shared repos** — propose changes as a PR or request human review first
+8. Note learnings in your memory files
 
 **Rotation schedule:**
 - Week 1: senior-dev, junior-dev

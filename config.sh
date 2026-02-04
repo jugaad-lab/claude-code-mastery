@@ -49,11 +49,11 @@ FULL_TEAM_AGENTS=(
   "junior-dev"
   "frontend-dev"
   "backend-dev"
-  "devops"
-  "qa-engineer"
-  "tech-writer"
-  "code-reviewer"
-  "architect"
+  "ai-engineer"
+  "ml-engineer"
+  "data-scientist"
+  "data-engineer"
+  "product-manager"
 )
 
 # =============================================================================

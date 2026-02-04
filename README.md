@@ -40,11 +40,11 @@ cd ~/clawd/skills/claude-code-mastery/scripts
 |-------|---------|
 | frontend-dev | React, UI, CSS, client-side |
 | backend-dev | APIs, databases, server-side |
-| devops | CI/CD, deployment, infrastructure |
-| qa-engineer | Testing, quality assurance |
-| tech-writer | Documentation, READMEs |
-| code-reviewer | Security review, best practices |
-| architect | System design, scalability |
+| ai-engineer | LLM apps, RAG, prompts, agents |
+| ml-engineer | ML models, training, MLOps |
+| data-scientist | SQL, analysis, statistics |
+| data-engineer | Pipelines, ETL, data infrastructure |
+| product-manager | Requirements, user stories, prioritization |
 
 Each agent includes a **"Learn More"** section with curated links to official docs, tutorials, and best practices.
 

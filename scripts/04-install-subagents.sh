@@ -40,8 +40,8 @@ while [[ $# -gt 0 ]]; do
             echo "  --help, -h         Show this help message"
             echo ""
             echo "Starter pack: senior-dev, project-manager, junior-dev"
-            echo "Full team adds: frontend-dev, backend-dev, devops, qa-engineer,"
-            echo "                tech-writer, code-reviewer, architect"
+            echo "Full team adds: frontend-dev, backend-dev, ai-engineer, ml-engineer,"
+            echo "                data-scientist, data-engineer, product-manager"
             exit 0
             ;;
         *)
