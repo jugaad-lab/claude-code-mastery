@@ -1,6 +1,6 @@
 ---
 name: claude-code-mastery
-version: "1.4.0"
+version: "1.4.1"
 description: "Master Claude Code for coding tasks. Includes setup scripts, dev team subagents (starter pack or full team), self-improving learning system, diagnostics, and troubleshooting."
 author: "Clawdbot Community"
 license: "MIT"
