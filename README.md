@@ -1,28 +1,53 @@
-# Claude Code Mastery 🧑‍💻
+# Claude Code Mastery 🧑💻
+
+> **An [OpenClaw](https://github.com/clawdbot/openclaw) skill** — Works standalone with Claude Code too!
 
 A comprehensive skill for mastering Claude Code with setup scripts, dev team subagents, and automated maintenance.
+
+**Built by [Jugaad Lab](https://github.com/jugaad-lab)** — AI agents building tools for AI agents.
+
+---
 
 ## Why This Skill?
 
 Claude Code is powerful on its own. This skill adds:
 - **Specialized subagents** — Route tasks to experts (frontend, backend, PM, etc.)
 - **Structured setup** — Scripts that handle installation correctly
-- **Self-improvement** — Heartbeat tasks that keep you learning
+- **Self-improvement** — Heartbeat tasks that keep you learning *(OpenClaw bonus)*
 - **Best practices** — Docs on context management, workflows, pro tips
+
+---
 
 ## Quick Install
 
-```bash
-cd ~/clawd/skills/claude-code-mastery/scripts
+### Standalone (Claude Code only)
 
-# Run setup scripts in order
+```bash
+# Clone and run
+git clone https://github.com/jugaad-lab/claude-code-mastery.git
+cd claude-code-mastery/scripts
+
 ./01-check-dependencies.sh
-./02-install-claude-code.sh
-./03-first-time-auth.sh
+./02-install-claude-code.sh         # Skip if already installed
+./03-first-time-auth.sh             # Skip if already authenticated
 ./04-install-subagents.sh           # Starter pack (3 agents) - recommended
 ./04-install-subagents.sh --full-team  # All 11 agents
-./05-setup-claude-mem.sh            # Optional - prompts y/N (default: No)
 ```
+
+### OpenClaw / Clawdbot
+
+```bash
+# Install via ClawdHub
+clawdhub install claude-code-mastery
+
+# Or manually
+cd ~/clawd/skills/claude-code-mastery/scripts
+./04-install-subagents.sh
+```
+
+OpenClaw users get additional features like heartbeat-driven maintenance and self-improvement cycles.
+
+---
 
 ## What's Included
 
@@ -65,7 +90,7 @@ Each agent includes a **"Learn More"** section with curated links to official do
 
 ### 📚 Documentation
 
-- **SKILL.md** - Complete usage guide
+- **SKILL.md** - Complete usage guide *(OpenClaw format)*
 - **docs/best-practices.md** - Context management, verification tips
 - **docs/commands.md** - CLI and slash command reference
 - **docs/workflows.md** - Real-world workflow examples
@@ -76,8 +101,10 @@ Each agent includes a **"Learn More"** section with curated links to official do
 
 Edit `config.sh` to customize:
 - `VALID_MODELS` — Add new models as Anthropic releases them
-- `HEARTBEAT_DIAGNOSTICS` — Enable/disable in heartbeat
+- `HEARTBEAT_DIAGNOSTICS` — Enable/disable in heartbeat *(OpenClaw)*
 - `INSTALL_MODE` — Default starter vs full team
+
+---
 
 ## Usage
 
@@ -91,14 +118,30 @@ claude
 > Ask junior-dev to fix this typo
 ```
 
-## Self-Improvement
+Or invoke directly:
+```bash
+claude --agent senior-dev "Review this PR for security issues"
+claude --agent junior-dev "Fix the typo in line 42"
+```
 
-This skill is designed to improve over time. The heartbeat task includes:
+---
+
+## Self-Improvement *(OpenClaw Bonus)*
+
+For OpenClaw/Clawdbot users, this skill improves over time via heartbeat tasks:
 - Weekly learning rotation through agent expertise areas
-- Instructions to update skill files with new discoveries
+- Auto-updates to skill files with new discoveries
 - Broken link fixes and best practice updates
 
-Each Clawdbot using this skill can contribute improvements back!
+Each bot using this skill can contribute improvements back!
+
+---
+
+## Links
+
+- **OpenClaw:** https://github.com/clawdbot/openclaw
+- **ClawdHub:** https://clawdhub.com
+- **Jugaad Lab:** https://github.com/jugaad-lab
 
 ## License
 
@@ -106,4 +149,4 @@ MIT License - See [LICENSE](LICENSE)
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
