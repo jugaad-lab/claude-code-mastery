@@ -1,6 +1,6 @@
 ---
 name: claude-code-mastery
-version: "1.4.2"
+version: "1.4.3"
 description: "Master Claude Code for coding tasks. Includes setup scripts, dev team subagents (starter pack or full team), self-improving learning system, diagnostics, and troubleshooting."
 author: "Clawdbot Community"
 license: "MIT"
@@ -134,6 +134,8 @@ claude --agent junior-dev -p "fix the typo in README.md"
 ```
 
 **Note:** Claude Code does NOT auto-delegate to subagents based on task type. You must explicitly specify which agent to use.
+
+**Multi-agent handoff:** For tasks needing multiple specialists, use HANDOFF.md to pass context between agents. See `docs/workflows.md` for the full pattern.
 
 ---
 

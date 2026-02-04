@@ -201,6 +201,50 @@ claude --permission-mode plan
 > if I change the User model schema, what else would break?
 ```
 
+## Agent Handoff Pattern
+
+When a task needs multiple specialists, use HANDOFF.md to pass context between agents:
+
+### Example: Frontend → Backend → DevOps
+
+**Step 1: Frontend builds the UI**
+```bash
+claude --agent frontend-dev -p "Build a user dashboard component. When done, write what backend APIs you need to HANDOFF.md"
+```
+
+**Step 2: Backend reads handoff, builds APIs**
+```bash
+claude --agent backend-dev -p "Read HANDOFF.md. Build the APIs that frontend requested. Add deployment notes to HANDOFF.md"
+```
+
+**Step 3: DevOps reads handoff, deploys**
+```bash
+claude --agent devops -p "Read HANDOFF.md. Set up CI/CD pipeline and deploy the new endpoints"
+```
+
+### HANDOFF.md Template
+```markdown
+# Handoff: [Feature Name]
+
+## Completed By: [agent-name]
+- What was built
+- Key decisions made
+- Files created/modified
+
+## Needs From Next Agent:
+- Specific requirements
+- Constraints to respect
+- Questions to resolve
+
+## Context:
+- Relevant background
+- Links to specs/docs
+```
+
+This pattern keeps each agent focused while maintaining continuity across the task.
+
+---
+
 ## Session Management
 
 ### Long Session Handoff
