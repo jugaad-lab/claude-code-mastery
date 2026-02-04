@@ -119,18 +119,20 @@ For larger projects, install all 10 with `--full-team`:
 
 ### Using Subagents
 
-Claude automatically delegates based on task:
+**Interactive mode:** Use the `/agent` slash command or natural language:
 ```
-"Review this code for security" → senior-dev
-"Create a task breakdown" → project-manager
-"Build a quick fix for this bug" → junior-dev
+/agent senior-dev
+Use the senior-dev agent to review this code
 ```
 
-Or explicitly request:
+**Non-interactive mode (`-p`):** Use the `--agent` flag:
+```bash
+claude --agent senior-dev -p "review this code for security issues"
+claude --agent project-manager -p "create a task breakdown for auth feature"
+claude --agent junior-dev -p "fix the typo in README.md"
 ```
-Use the senior-dev agent to review this code
-Have project-manager create a timeline for this feature
-```
+
+**Note:** Claude Code does NOT auto-delegate to subagents based on task type. You must explicitly specify which agent to use.
 
 ---
 

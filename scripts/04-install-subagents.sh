@@ -126,6 +126,21 @@ for agent_file in "$AGENTS_SRC"/*.md; do
     fi
     
     filename=$(basename "$agent_file")
+    agent_basename="${filename%.md}"
+    
+    # Skip agents not in AGENTS_TO_INSTALL (if filtering enabled)
+    if [[ ${#AGENTS_TO_INSTALL[@]} -gt 0 ]]; then
+        skip=true
+        for wanted in "${AGENTS_TO_INSTALL[@]}"; do
+            if [[ "$agent_basename" == "$wanted" ]]; then
+                skip=false
+                break
+            fi
+        done
+        if [[ "$skip" == "true" ]]; then
+            continue
+        fi
+    fi
     dest_file="$AGENTS_DEST/$filename"
     
     # Extract agent name and model from file
