@@ -1,6 +1,6 @@
 ---
 name: claude-code-mastery
-version: "1.4.1"
+version: "1.4.2"
 description: "Master Claude Code for coding tasks. Includes setup scripts, dev team subagents (starter pack or full team), self-improving learning system, diagnostics, and troubleshooting."
 author: "Clawdbot Community"
 license: "MIT"
@@ -48,7 +48,7 @@ cd ~/clawd/skills/claude-code-mastery/scripts
 
 # 4. Install dev team subagents
 ./04-install-subagents.sh              # Starter pack (3 agents) - recommended
-./04-install-subagents.sh --full-team  # All 10 agents
+./04-install-subagents.sh --full-team  # All 11 agents
 
 # 5. (Optional) Persistent memory - prompts y/N, default No
 ./05-setup-claude-mem.sh               # Interactive prompt
@@ -102,7 +102,7 @@ Install: `./04-install-subagents.sh` (or `--minimal`)
 
 ### Full Team (Optional) — All 10 Agents
 
-For larger projects, install all 10 with `--full-team`:
+For larger projects, install all 11 with `--full-team`:
 
 | Agent | Model | Purpose |
 |-------|-------|---------|
@@ -116,6 +116,7 @@ For larger projects, install all 10 with `--full-team`:
 | `data-scientist` | Sonnet | SQL, analysis, statistics |
 | `data-engineer` | Sonnet | Pipelines, ETL, data infrastructure |
 | `product-manager` | Sonnet | Requirements, user stories, prioritization |
+| `devops` | Sonnet | CI/CD, Docker, K8s, infrastructure, automation |
 
 ### Using Subagents
 
@@ -295,6 +296,7 @@ Add to your HEARTBEAT.md for automatic maintenance:
 - Week 3: ai-engineer, ml-engineer
 - Week 4: data-scientist, data-engineer
 - Week 5: project-manager, product-manager
+- Week 6: devops
 
 **What to update:**
 - `agents/*.md` — Add new links, update best practices, fix outdated info

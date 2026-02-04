@@ -20,7 +20,7 @@ cd ~/clawd/skills/claude-code-mastery/scripts
 ./02-install-claude-code.sh
 ./03-first-time-auth.sh
 ./04-install-subagents.sh           # Starter pack (3 agents) - recommended
-./04-install-subagents.sh --full-team  # All 10 agents
+./04-install-subagents.sh --full-team  # All 11 agents
 ./05-setup-claude-mem.sh            # Optional - prompts y/N (default: No)
 ```
 
@@ -45,6 +45,7 @@ cd ~/clawd/skills/claude-code-mastery/scripts
 | data-scientist | SQL, analysis, statistics |
 | data-engineer | Pipelines, ETL, data infrastructure |
 | product-manager | Requirements, user stories, prioritization |
+| devops | CI/CD, Docker, K8s, infrastructure, automation |
 
 Each agent includes a **"Learn More"** section with curated links to official docs, tutorials, and best practices.
 

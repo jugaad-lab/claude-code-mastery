@@ -31,7 +31,7 @@ DEFAULT_MODEL="sonnet"
 # =============================================================================
 # INSTALLATION OPTIONS
 # =============================================================================
-# Starter pack (3 core agents) vs full team (10 agents)
+# Starter pack (3 core agents) vs full team (11 agents)
 # Options: "starter" or "full"
 INSTALL_MODE="starter"
 
@@ -54,6 +54,7 @@ FULL_TEAM_AGENTS=(
   "data-scientist"
   "data-engineer"
   "product-manager"
+  "devops"
 )
 
 # =============================================================================

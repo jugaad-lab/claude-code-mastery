@@ -36,7 +36,7 @@ while [[ $# -gt 0 ]]; do
             echo "Options:"
             echo "  --dry-run, -n      Show what would be done without making changes"
             echo "  --minimal          Install starter pack only (3 core agents) [default]"
-            echo "  --full-team        Install all 10 dev team agents"
+            echo "  --full-team        Install all 11 dev team agents"
             echo "  --help, -h         Show this help message"
             echo ""
             echo "Starter pack: senior-dev, project-manager, junior-dev"
@@ -59,7 +59,7 @@ if [[ "$INSTALL_MODE" == "full" ]]; then
 else
     AGENTS_TO_INSTALL=("${STARTER_AGENTS[@]:-senior-dev project-manager junior-dev}")
     echo "📦 Installing STARTER PACK (${#AGENTS_TO_INSTALL[@]} agents)"
-    echo "   (Use --full-team for all 10 agents)"
+    echo "   (Use --full-team for all 11 agents)"
 fi
 
 # Valid Claude Code model names (from config.sh or defaults)
