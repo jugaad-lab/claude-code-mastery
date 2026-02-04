@@ -247,12 +247,18 @@ Add to your HEARTBEAT.md for automatic maintenance:
 1. Run: `~/clawd/skills/claude-code-mastery/scripts/07-weekly-improvement-cron.sh`
 2. Propose improvements (require human approval)
 
-### Weekly Learning (rotate through agents):
-1. Pick ONE agent file from `~/.claude/agents/` (rotate weekly)
+### Weekly Learning & Skill Improvement (rotate through agents):
+1. Pick ONE agent file from the skill's `agents/` folder (rotate weekly)
 2. Read the "Learn More" section
 3. Visit 2-3 links that are relevant to current projects
 4. Internalize key concepts and update your workflows
-5. Note any improvements in your memory files
+5. **Improve the skill itself:**
+   - Found a better resource? Add it to "Learn More"
+   - Discovered a new best practice? Update the agent's guidelines
+   - Link broken or outdated? Remove or replace it
+   - New tool or framework worth mentioning? Add it
+6. Commit changes to the skill repo with clear commit messages
+7. Note learnings in your memory files
 
 **Rotation schedule:**
 - Week 1: senior-dev, junior-dev
@@ -260,13 +266,18 @@ Add to your HEARTBEAT.md for automatic maintenance:
 - Week 3: ai-engineer, ml-engineer
 - Week 4: data-scientist, data-engineer
 - Week 5: project-manager, product-manager
+
+**What to update:**
+- `agents/*.md` — Add new links, update best practices, fix outdated info
+- `SKILL.md` — Improve documentation, add tips discovered
+- `docs/*.md` — Enhance guides based on real usage
 ```
 
-**Why learn from these links?**
-- Stay current with best practices
-- Discover better tools and patterns
-- Improve code quality over time
-- Build deeper expertise in relevant areas
+**Why this matters:**
+- Skill improves over time through actual use
+- Links stay current (broken ones get fixed)
+- Best practices evolve with the ecosystem
+- Each Clawdbot contributes back to the skill
 
 ---
 
