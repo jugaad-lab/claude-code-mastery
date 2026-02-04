@@ -54,7 +54,7 @@ done
 
 # Set agent list based on mode
 if [[ "$INSTALL_MODE" == "full" ]]; then
-    AGENTS_TO_INSTALL=("${FULL_TEAM_AGENTS[@]:-senior-dev project-manager junior-dev frontend-dev backend-dev devops qa-engineer tech-writer code-reviewer architect}")
+    AGENTS_TO_INSTALL=("${FULL_TEAM_AGENTS[@]:-senior-dev project-manager junior-dev frontend-dev backend-dev ai-engineer ml-engineer data-scientist data-engineer product-manager}")
     echo "📦 Installing FULL TEAM (${#AGENTS_TO_INSTALL[@]} agents)"
 else
     AGENTS_TO_INSTALL=("${STARTER_AGENTS[@]:-senior-dev project-manager junior-dev}")
