@@ -1,0 +1,274 @@
+---
+name: claude-code-mastery
+version: "1.2.0"
+description: "Master Claude Code for coding tasks. Includes setup scripts, dev team subagents, diagnostics, troubleshooting, and weekly workflow improvement automation."
+author: "Clawdbot Community"
+license: "MIT"
+metadata: {"openclaw":{"emoji":"🧑‍💻"}}
+---
+
+# Claude Code Mastery
+
+Complete skill for setting up, optimizing, and mastering Claude Code with a full development team of subagents.
+
+**Official Docs:** https://code.claude.com/docs
+
+---
+
+## ⚡ Quick Check: Is Setup Complete?
+
+**Run this first:**
+```bash
+command -v claude >/dev/null && echo "✅ Claude Code installed - SKIP to 'Daily Use' section" || echo "❌ Not installed - follow 'First-Time Setup' below"
+```
+
+If Claude Code is already installed, **skip directly to the "Daily Use" section below.**
+
+---
+
+# 🔧 FIRST-TIME SETUP (Skip if already installed)
+
+> **Note to bot:** Only follow this section if Claude Code is NOT installed. Check with the command above. Once setup is complete, this section can be ignored on future invocations.
+
+## Setup Scripts
+
+Run these in order:
+
+```bash
+cd ~/clawd/skills/claude-code-mastery/scripts
+
+# 1. Check dependencies
+./01-check-dependencies.sh
+
+# 2. Install Claude Code
+./02-install-claude-code.sh
+
+# 3. Authenticate
+./03-first-time-auth.sh
+
+# 4. Install dev team subagents
+./04-install-subagents.sh
+
+# 5. (Optional) Setup persistent memory
+./05-setup-claude-mem.sh
+```
+
+## Setup Gotchas
+
+| Issue | Solution |
+|-------|----------|
+| "Command not found" | Add `~/.local/bin` to PATH |
+| Auth errors | Run `./03-first-time-auth.sh` |
+| Slow startup | First run indexes codebase |
+| Subagents not showing | Run `./04-install-subagents.sh` |
+
+## Post-Setup: Add Heartbeat Task
+
+After setup, add the maintenance task to your HEARTBEAT.md (see "Heartbeat Maintenance" in Daily Use section).
+
+**Setup complete! Continue to Daily Use section.**
+
+---
+
+# 📘 DAILY USE (Always relevant)
+
+This section covers ongoing usage - reference this for all coding tasks.
+
+## Dev Team Subagents
+
+10 specialized subagents installed to `~/.claude/agents/`:
+
+| Agent | Model | Purpose |
+|-------|-------|---------|
+| `project-manager` | Sonnet | Task breakdown, timelines, dependencies |
+| `product-manager` | Sonnet | Requirements, user stories, prioritization |
+| `senior-dev` | Sonnet | Architecture, complex code, code review |
+| `junior-dev` | **Haiku** | Quick fixes, simple tasks (fast & cheap) |
+| `frontend-dev` | Sonnet | React, UI, CSS, client-side |
+| `backend-dev` | Sonnet | APIs, databases, server-side |
+| `data-scientist` | Sonnet | SQL, analysis, statistics |
+| `data-engineer` | Sonnet | Pipelines, ETL, data infrastructure |
+| `ml-engineer` | Sonnet | ML models, training, MLOps |
+| `ai-engineer` | Sonnet | LLM apps, RAG, prompts, agents |
+
+### Using Subagents
+
+Claude automatically delegates based on task:
+```
+"Review this code for security" → senior-dev
+"Create a task breakdown" → project-manager
+"Analyze user retention" → data-scientist
+```
+
+Or explicitly request:
+```
+Use the frontend-dev agent to build this component
+Have project-manager create a timeline for this feature
+```
+
+---
+
+## Quick Reference
+
+### CLI Commands
+```bash
+claude              # Start interactive
+claude -c           # Continue previous session
+claude -p "prompt"  # Non-interactive mode
+```
+
+### Slash Commands
+```
+/agents   - Manage subagents
+/clear    - Clear conversation (use between tasks!)
+/compact  - Compress context
+/model    - Change model
+/help     - All commands
+```
+
+### Keyboard Shortcuts
+```
+Shift+Tab - Toggle Plan mode (read-only exploration)
+Ctrl+C    - Cancel operation
+Ctrl+B    - Background task
+```
+
+---
+
+## Context Management (Critical!)
+
+| Command | What it does | When to use |
+|---------|--------------|-------------|
+| `/clear` | Clear conversation, start fresh | Between unrelated tasks |
+| `/compact` | Summarize and compress context | When context getting full |
+| `Shift+Tab` | Toggle Plan mode (read-only) | Exploration before implementing |
+
+**Best practices:**
+1. `/clear` between unrelated tasks
+2. Use Plan mode for exploration before implementing
+3. Subagents isolate verbose operations
+4. Create HANDOFF.md for session continuity
+
+---
+
+## Project Configuration
+
+### settings.json
+
+Create `.claude/settings.json` in your project:
+
+```json
+{
+  "model": "sonnet",
+  "permissions": {
+    "allow": ["Bash(npm:*)", "Bash(git:*)", "Read", "Write", "Edit"],
+    "deny": ["Bash(rm -rf:*)", "Bash(sudo:*)"]
+  }
+}
+```
+
+### CLAUDE.md
+
+Create `CLAUDE.md` in your project root (Claude reads this automatically):
+
+```markdown
+# Project: MyApp
+
+## Tech Stack
+- Frontend: React, TypeScript, Tailwind
+- Backend: Node.js, PostgreSQL
+
+## Commands
+- `npm run dev` - Start dev server
+- `npm test` - Run tests
+```
+
+See `examples/CLAUDE-template.md` for a full template.
+
+---
+
+## Claude-Mem (If Installed)
+
+Check status:
+```bash
+pgrep -f "worker-service" >/dev/null && echo "running" || echo "stopped"
+```
+
+Start if stopped:
+```bash
+cd ~/.claude/plugins/marketplaces/thedotmack && bun plugin/scripts/worker-service.cjs start
+```
+
+Web UI: http://localhost:37777
+
+---
+
+## Diagnostics & Troubleshooting
+
+**Quick diagnostics:**
+```bash
+~/clawd/skills/claude-code-mastery/scripts/06-diagnostics.sh
+```
+
+**Full troubleshooting (if issues found):**
+```bash
+~/clawd/skills/claude-code-mastery/scripts/08-troubleshoot.sh
+```
+
+**Common issues guide:** See `docs/troubleshooting.md` for solutions to:
+- Authentication problems (API key, OAuth, logout bugs)
+- Installation issues (PATH, WSL, Node.js version)
+- Network errors (firewalls, VPNs, proxies)
+- Performance problems (high CPU, hangs, slow search)
+
+---
+
+## Heartbeat Maintenance
+
+Add to your HEARTBEAT.md for automatic maintenance:
+
+```markdown
+## Claude Code Maintenance
+
+**Last Health Check:** [timestamp]
+
+### Every Heartbeat (if coding tasks active):
+1. Quick claude-mem check (if installed):
+   `pgrep -f "worker-service" >/dev/null && echo "running" || echo "stopped"`
+   - Only restart if stopped
+   - Note: pgrep saves ~500 tokens vs full status command
+
+### Daily (morning):
+1. Quick health check: `command -v claude && pgrep -f "worker-service"`
+2. Only run full diagnostics if quick check fails
+
+### Weekly (Sunday):
+1. Run: `~/clawd/skills/claude-code-mastery/scripts/07-weekly-improvement-cron.sh`
+2. Propose improvements (require human approval)
+```
+
+---
+
+## Scripts Reference
+
+| Script | Purpose | When to use |
+|--------|---------|-------------|
+| `06-diagnostics.sh` | Health check and status report | When issues occur |
+| `07-weekly-improvement-cron.sh` | Generate improvement report | Weekly (Sunday) |
+| `08-troubleshoot.sh` | Comprehensive troubleshooting | When 06 finds issues |
+
+---
+
+## Summary
+
+**For coding tasks:**
+1. Use appropriate subagent for the task
+2. Manage context with `/clear` and Plan mode
+3. Run diagnostics if something breaks
+
+**Heartbeat handles:**
+- claude-mem health checks
+- Daily quick diagnostics
+- Weekly improvement research
+
+The dev team subagents turn Claude Code into a full development organization.
