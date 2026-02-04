@@ -231,6 +231,7 @@ Add to your HEARTBEAT.md for automatic maintenance:
 ## Claude Code Maintenance
 
 **Last Health Check:** [timestamp]
+**Last Learning Session:** [timestamp]
 
 ### Every Heartbeat (if coding tasks active):
 1. Quick claude-mem check (if installed):
@@ -245,7 +246,27 @@ Add to your HEARTBEAT.md for automatic maintenance:
 ### Weekly (Sunday):
 1. Run: `~/clawd/skills/claude-code-mastery/scripts/07-weekly-improvement-cron.sh`
 2. Propose improvements (require human approval)
+
+### Weekly Learning (rotate through agents):
+1. Pick ONE agent file from `~/.claude/agents/` (rotate weekly)
+2. Read the "Learn More" section
+3. Visit 2-3 links that are relevant to current projects
+4. Internalize key concepts and update your workflows
+5. Note any improvements in your memory files
+
+**Rotation schedule:**
+- Week 1: senior-dev, junior-dev
+- Week 2: frontend-dev, backend-dev
+- Week 3: ai-engineer, ml-engineer
+- Week 4: data-scientist, data-engineer
+- Week 5: project-manager, product-manager
 ```
+
+**Why learn from these links?**
+- Stay current with best practices
+- Discover better tools and patterns
+- Improve code quality over time
+- Build deeper expertise in relevant areas
 
 ---
 
