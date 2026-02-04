@@ -1,7 +1,7 @@
 ---
 name: claude-code-mastery
-version: "1.2.0"
-description: "Master Claude Code for coding tasks. Includes setup scripts, dev team subagents, diagnostics, troubleshooting, and weekly workflow improvement automation."
+version: "1.4.0"
+description: "Master Claude Code for coding tasks. Includes setup scripts, dev team subagents (starter pack or full team), self-improving learning system, diagnostics, and troubleshooting."
 author: "Clawdbot Community"
 license: "MIT"
 metadata: {"openclaw":{"emoji":"🧑‍💻"}}
@@ -47,11 +47,21 @@ cd ~/clawd/skills/claude-code-mastery/scripts
 ./03-first-time-auth.sh
 
 # 4. Install dev team subagents
-./04-install-subagents.sh
+./04-install-subagents.sh              # Starter pack (3 agents) - recommended
+./04-install-subagents.sh --full-team  # All 10 agents
 
-# 5. (Optional) Setup persistent memory
-./05-setup-claude-mem.sh
+# 5. (Optional) Persistent memory - prompts y/N, default No
+./05-setup-claude-mem.sh               # Interactive prompt
+./05-setup-claude-mem.sh --skip        # Skip entirely
+./05-setup-claude-mem.sh --yes         # Install without prompting
 ```
+
+## Configuration
+
+Edit `config.sh` to customize:
+- `VALID_MODELS` — Add models as Anthropic releases them
+- `HEARTBEAT_DIAGNOSTICS` — Enable/disable in heartbeat (default: false)
+- `INSTALL_MODE` — Default to "starter" or "full"
 
 ## Setup Gotchas
 
@@ -76,20 +86,36 @@ This section covers ongoing usage - reference this for all coding tasks.
 
 ## Dev Team Subagents
 
-10 specialized subagents installed to `~/.claude/agents/`:
+Subagents are installed to `~/.claude/agents/`. Each has a **"Learn More"** section with curated links to deepen expertise.
+
+### Starter Pack (Default) — 3 Core Agents
+
+Most users only need these:
 
 | Agent | Model | Purpose |
 |-------|-------|---------|
-| `project-manager` | Sonnet | Task breakdown, timelines, dependencies |
-| `product-manager` | Sonnet | Requirements, user stories, prioritization |
 | `senior-dev` | Sonnet | Architecture, complex code, code review |
+| `project-manager` | Sonnet | Task breakdown, timelines, dependencies |
+| `junior-dev` | **Haiku** | Quick fixes, simple tasks (fast & cheap) |
+
+Install: `./04-install-subagents.sh` (or `--minimal`)
+
+### Full Team (Optional) — All 10 Agents
+
+For larger projects, install all 10 with `--full-team`:
+
+| Agent | Model | Purpose |
+|-------|-------|---------|
+| `senior-dev` | Sonnet | Architecture, complex code, code review |
+| `project-manager` | Sonnet | Task breakdown, timelines, dependencies |
 | `junior-dev` | **Haiku** | Quick fixes, simple tasks (fast & cheap) |
 | `frontend-dev` | Sonnet | React, UI, CSS, client-side |
 | `backend-dev` | Sonnet | APIs, databases, server-side |
+| `ai-engineer` | Sonnet | LLM apps, RAG, prompts, agents |
+| `ml-engineer` | Sonnet | ML models, training, MLOps |
 | `data-scientist` | Sonnet | SQL, analysis, statistics |
 | `data-engineer` | Sonnet | Pipelines, ETL, data infrastructure |
-| `ml-engineer` | Sonnet | ML models, training, MLOps |
-| `ai-engineer` | Sonnet | LLM apps, RAG, prompts, agents |
+| `product-manager` | Sonnet | Requirements, user stories, prioritization |
 
 ### Using Subagents
 
@@ -97,12 +123,12 @@ Claude automatically delegates based on task:
 ```
 "Review this code for security" → senior-dev
 "Create a task breakdown" → project-manager
-"Analyze user retention" → data-scientist
+"Build a quick fix for this bug" → junior-dev
 ```
 
 Or explicitly request:
 ```
-Use the frontend-dev agent to build this component
+Use the senior-dev agent to review this code
 Have project-manager create a timeline for this feature
 ```
 
