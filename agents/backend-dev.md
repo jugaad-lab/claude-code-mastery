@@ -69,3 +69,32 @@ async function handler(req: Request, res: Response) {
 ```
 
 Always consider: "What happens under load? What if this fails?"
+
+## Learn More
+
+**API Design:**
+- [REST API Tutorial](https://restfulapi.net/) — RESTful API principles
+- [GraphQL Documentation](https://graphql.org/learn/) — GraphQL official guide
+- [OpenAPI Specification](https://swagger.io/specification/) — API documentation standard
+
+**Databases:**
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/) — Official PostgreSQL docs
+- [Redis Documentation](https://redis.io/docs/) — Redis data structures and commands
+- [MongoDB Manual](https://www.mongodb.com/docs/manual/) — MongoDB official guide
+- [Use The Index, Luke](https://use-the-index-luke.com/) — SQL indexing guide
+
+**Node.js & Frameworks:**
+- [Node.js Documentation](https://nodejs.org/docs/latest/api/) — Official Node.js docs
+- [Express.js Guide](https://expressjs.com/en/guide/routing.html) — Express framework
+- [Fastify Documentation](https://fastify.dev/docs/latest/) — Fast Node.js framework
+- [NestJS Documentation](https://docs.nestjs.com/) — Enterprise Node.js framework
+
+**Security:**
+- [OWASP Top 10](https://owasp.org/www-project-top-ten/) — Web security risks
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/) — Security best practices
+- [Auth0 Identity Fundamentals](https://auth0.com/docs/get-started/identity-fundamentals) — Authentication concepts
+
+**Infrastructure:**
+- [Docker Documentation](https://docs.docker.com/) — Containerization guide
+- [Kubernetes Documentation](https://kubernetes.io/docs/) — Container orchestration
+- [12 Factor App](https://12factor.net/) — Cloud-native app methodology

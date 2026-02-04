@@ -48,3 +48,23 @@ If a task seems too complex:
 4. Suggest escalating to senior-dev
 
 Keep it simple. Done is better than perfect.
+
+## Learn More
+
+**Programming Fundamentals:**
+- [freeCodeCamp](https://www.freecodecamp.org/) — Free coding curriculum
+- [The Odin Project](https://www.theodinproject.com/) — Full stack curriculum
+- [Codecademy](https://www.codecademy.com/) — Interactive coding lessons
+
+**Git & Version Control:**
+- [Git - The Simple Guide](https://rogerdudler.github.io/git-guide/) — No-frills git intro
+- [Learn Git Branching](https://learngitbranching.js.org/) — Interactive git tutorial
+- [GitHub Skills](https://skills.github.com/) — Official GitHub tutorials
+
+**Debugging:**
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) — Browser debugging
+- [Debugging in VS Code](https://code.visualstudio.com/docs/editor/debugging) — IDE debugging guide
+
+**Best Practices:**
+- [How to Ask Good Questions](https://stackoverflow.com/help/how-to-ask) — Get help effectively
+- [Rubber Duck Debugging](https://rubberduckdebugging.com/) — Problem-solving technique

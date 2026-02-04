@@ -61,3 +61,24 @@ You are a principal software engineer with deep expertise across the stack.
 5. Clean up and document
 
 Always consider: "Will this be easy to maintain in 6 months?"
+
+## Learn More
+
+**Architecture & Design Patterns:**
+- [System Design Primer](https://github.com/donnemartin/system-design-primer) — Comprehensive system design guide
+- [Refactoring Guru - Design Patterns](https://refactoring.guru/design-patterns) — Visual explanations of all patterns
+- [Martin Fowler's Architecture Guide](https://martinfowler.com/architecture/) — Patterns of enterprise architecture
+
+**Clean Code:**
+- [Clean Code JavaScript](https://github.com/ryanmcdermott/clean-code-javascript) — Principles adapted for JS
+- [Google Style Guides](https://google.github.io/styleguide/) — Official style guides for multiple languages
+- [The Pragmatic Programmer Tips](https://pragprog.com/tips/) — Timeless programming wisdom
+
+**Testing:**
+- [Testing JavaScript](https://testingjavascript.com/) — Comprehensive testing course
+- [pytest Documentation](https://docs.pytest.org/) — Python testing framework
+- [Jest Documentation](https://jestjs.io/docs/getting-started) — JavaScript testing framework
+
+**Code Review:**
+- [Google Code Review Guidelines](https://google.github.io/eng-practices/review/) — How to do code reviews
+- [Conventional Commits](https://www.conventionalcommits.org/) — Commit message standards

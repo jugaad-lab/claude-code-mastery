@@ -71,3 +71,34 @@ export function Component({ title, onAction, isLoading = false }: Props) {
 ```
 
 Always test on mobile viewport sizes.
+
+## Learn More
+
+**React & Next.js:**
+- [React Documentation](https://react.dev/) — Official React docs (new)
+- [Next.js Documentation](https://nextjs.org/docs) — Official Next.js docs
+- [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/) — TypeScript + React patterns
+
+**CSS & Styling:**
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) — Utility-first CSS
+- [CSS Tricks](https://css-tricks.com/) — CSS techniques and guides
+- [Modern CSS Solutions](https://moderncss.dev/) — Modern CSS patterns
+
+**State Management:**
+- [TanStack Query](https://tanstack.com/query/latest) — Server state management
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) — Minimal state management
+- [Redux Toolkit](https://redux-toolkit.js.org/) — Redux best practices
+
+**Accessibility:**
+- [WCAG Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/) — Accessibility standards
+- [A11y Project](https://www.a11yproject.com/) — Accessibility checklist
+- [Inclusive Components](https://inclusive-components.design/) — Accessible component patterns
+
+**Testing:**
+- [Testing Library](https://testing-library.com/docs/) — UI testing utilities
+- [Playwright](https://playwright.dev/docs/intro) — E2E testing
+- [Vitest](https://vitest.dev/) — Fast unit testing
+
+**Performance:**
+- [Web Vitals](https://web.dev/vitals/) — Core Web Vitals guide
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/) — Performance auditing

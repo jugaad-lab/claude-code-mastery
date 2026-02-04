@@ -70,25 +70,42 @@ async def generate_with_retry(
     prompt: str,
     max_retries: int = 3
 ) -> str:
-    """
-    Generate with retries, timeout, and validation.
-    """
     for attempt in range(max_retries):
         try:
-            response = await llm.generate(
-                prompt,
-                timeout=30,
-                temperature=0.7
-            )
-            # Validate response format
+            response = await llm.generate(prompt, timeout=30)
             if validate_output(response):
                 return response
-            # Retry on invalid format
         except RateLimitError:
             await exponential_backoff(attempt)
-        except TimeoutError:
-            continue
     raise GenerationError("Failed after retries")
 ```
 
 Always have fallbacks. LLMs are probabilistic.
+
+## Learn More
+
+**LLM APIs & Providers:**
+- [Anthropic Claude Documentation](https://docs.anthropic.com/) — Claude API docs
+- [OpenAI API Documentation](https://platform.openai.com/docs) — GPT API docs
+- [Hugging Face Hub](https://huggingface.co/docs) — Open source models
+
+**Prompt Engineering:**
+- [Anthropic Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Claude prompting guide
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering) — GPT prompting
+- [Learn Prompting](https://learnprompting.org/) — Comprehensive prompt course
+
+**RAG & Retrieval:**
+- [LangChain Documentation](https://python.langchain.com/docs/) — LLM application framework
+- [LlamaIndex Documentation](https://docs.llamaindex.ai/) — Data framework for LLMs
+- [Pinecone Documentation](https://docs.pinecone.io/) — Vector database
+- [Chroma Documentation](https://docs.trychroma.com/) — Open source vector DB
+
+**Agents & Tools:**
+- [LangChain Agents](https://python.langchain.com/docs/concepts/agents/) — Agentic patterns
+- [Anthropic Tool Use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use) — Function calling
+- [OpenAI Function Calling](https://platform.openai.com/docs/guides/function-calling) — Tool use guide
+
+**Evaluation:**
+- [RAGAS](https://docs.ragas.io/) — RAG evaluation framework
+- [Promptfoo](https://www.promptfoo.dev/docs/intro/) — LLM testing tool
+- [Langsmith](https://docs.smith.langchain.com/) — LLM observability

@@ -57,25 +57,47 @@ You are a senior ML engineer specializing in building production ML systems.
 ## Code Standards
 
 ```python
-# Training script structure
 @dataclass
 class TrainingConfig:
     model_name: str
     learning_rate: float
     epochs: int
-    # ... all hyperparameters
 
 def train(config: TrainingConfig) -> Model:
-    """
-    Train model with full experiment tracking.
-    """
     # 1. Log config to experiment tracker
     # 2. Load and validate data
-    # 3. Create feature pipeline
-    # 4. Train with checkpointing
-    # 5. Evaluate on holdout
-    # 6. Log metrics and artifacts
-    # 7. Register if meets threshold
+    # 3. Train with checkpointing
+    # 4. Evaluate and log metrics
+    # 5. Register if meets threshold
 ```
 
 Always track: data version, code version, config, metrics, artifacts.
+
+## Learn More
+
+**ML Frameworks:**
+- [PyTorch Documentation](https://pytorch.org/docs/stable/) — PyTorch official docs
+- [TensorFlow Documentation](https://www.tensorflow.org/api_docs) — TensorFlow guide
+- [scikit-learn Documentation](https://scikit-learn.org/stable/documentation.html) — Classical ML
+
+**MLOps & Experiment Tracking:**
+- [MLflow Documentation](https://mlflow.org/docs/latest/index.html) — ML lifecycle management
+- [Weights & Biases Docs](https://docs.wandb.ai/) — Experiment tracking
+- [DVC Documentation](https://dvc.org/doc) — Data version control
+- [Kubeflow](https://www.kubeflow.org/docs/) — ML on Kubernetes
+
+**Feature Engineering:**
+- [Feast Documentation](https://docs.feast.dev/) — Feature store
+- [Feature Engineering for ML](https://www.oreilly.com/library/view/feature-engineering-for/9781491953235/) — O'Reilly book
+- [Featuretools](https://featuretools.alteryx.com/en/stable/) — Automated feature engineering
+
+**Model Serving:**
+- [TorchServe](https://pytorch.org/serve/) — PyTorch model serving
+- [TensorFlow Serving](https://www.tensorflow.org/tfx/guide/serving) — TF model serving
+- [BentoML](https://docs.bentoml.com/) — ML model deployment
+- [Seldon Core](https://docs.seldon.io/projects/seldon-core/en/latest/) — Kubernetes ML serving
+
+**Best Practices:**
+- [Made With ML](https://madewithml.com/) — MLOps course
+- [Full Stack Deep Learning](https://fullstackdeeplearning.com/) — Production ML course
+- [ML Engineering by Andriy Burkov](http://www.mlebook.com/) — Free ML engineering book
