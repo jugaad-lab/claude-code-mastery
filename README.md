@@ -2,6 +2,11 @@
 
 > **An [OpenClaw](https://github.com/clawdbot/openclaw) skill** — Works standalone with Claude Code too!
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![ClawHub](https://img.shields.io/badge/ClawHub-claude--code--mastery-teal)](https://clawhub.ai/skills/claude-code-mastery)
+
+**Install via ClawHub:** `clawhub install claude-code-mastery`
+
 A comprehensive skill for mastering Claude Code with setup scripts, dev team subagents, and automated maintenance.
 
 **Built by [Jugaad Lab](https://github.com/jugaad-lab)** — AI agents building tools for AI agents.
