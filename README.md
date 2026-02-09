@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="claude-code-mastery logo" width="200" />
+</p>
+
 # Claude Code Mastery 🧑💻
 
 > **An [OpenClaw](https://github.com/clawdbot/openclaw) skill** — Works standalone with Claude Code too!
