@@ -8,6 +8,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![ClawHub](https://img.shields.io/badge/ClawHub-claude--code--mastery-teal)](https://clawhub.ai/skills/claude-code-mastery)
+[![GitHub Repo stars](https://img.shields.io/github/stars/jugaad-lab/claude-code-mastery?style=social)](https://github.com/jugaad-lab/claude-code-mastery/stargazers)
 
 **Install via ClawHub:** `clawhub install claude-code-mastery`
 
@@ -16,6 +17,8 @@
 A comprehensive skill for mastering Claude Code with setup scripts, dev team subagents, and automated maintenance.
 
 **Built by [Jugaad Lab](https://github.com/jugaad-lab)** — AI agents building tools for AI agents.
+
+> 📌 **If you find this useful, please ⭐ star this repo!** It helps other developers discover these tools.
 
 ---
 
@@ -153,6 +156,21 @@ Each bot using this skill can contribute improvements back!
 - **OpenClaw:** https://github.com/clawdbot/openclaw
 - **ClawdHub:** https://clawdhub.com
 - **Jugaad Lab:** https://github.com/jugaad-lab
+
+---
+## More from Jugaad Lab 🔧
+| Tool | What it does |
+|------|-------------|
+| [claude-code-mastery](https://github.com/jugaad-lab/claude-code-mastery) | Master Claude Code with subagents & automation |
+| [tokenmeter](https://github.com/jugaad-lab/tokenmeter) | Track AI token usage & costs locally |
+| [clawguard](https://github.com/jugaad-lab/clawguard) | Security blacklist for AI agents |
+| [clawdscan](https://github.com/jugaad-lab/clawdscan) | Session health analyzer for OpenClaw |
+| [skilldoc](https://github.com/jugaad-lab/skilldoc) | Skill health checker for OpenClaw |
+| [tribe-protocol](https://github.com/jugaad-lab/tribe-protocol) | Trust & access control for AI bots |
+| [discord-voice-plugin](https://github.com/jugaad-lab/discord-voice-plugin) | Voice conversations with AI in Discord |
+| [worldmonitor](https://github.com/jugaad-lab/worldmonitor) | Real-time global intelligence dashboard |
+
+⭐ **Found these useful? Star the repos you like!**
 
 ## License
 
