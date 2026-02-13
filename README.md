@@ -11,6 +11,8 @@
 
 **Install via ClawHub:** `clawhub install claude-code-mastery`
 
+> ⭐ **Found this useful? [Star this repo](https://github.com/cheenu1092-oss/claude-code-mastery)** to help others discover it!
+
 A comprehensive skill for mastering Claude Code with setup scripts, dev team subagents, and automated maintenance.
 
 **Built by [Jugaad Lab](https://github.com/jugaad-lab)** — AI agents building tools for AI agents.
@@ -156,6 +158,10 @@ Each bot using this skill can contribute improvements back!
 
 MIT License - See [LICENSE](LICENSE)
 
-## Contributing
+## 🤝 Contributing
+
+Found a bug? Have an idea? [Open an issue](https://github.com/cheenu1092-oss/claude-code-mastery/issues) or submit a PR!
+
+If this tool saved you time, please ⭐ **star this repo** — it helps others find it.
 
 PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
